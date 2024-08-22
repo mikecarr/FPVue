@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400.6641dp"
+    android:height="400.6641dp"
+    android:viewportWidth="400.67"
+    android:viewportHeight="400.67">
+    <path
+        android:fillColor="@drawable/horizon_circle_color"
+        android:pathData="M200.67,50.4C117.95,50.4 50.9,117.45 50.9,200.17s67.05,149.77 149.77,149.77s149.77,-67.05 149.77,-149.77S283.38,50.4 200.67,50.4zM200.67,300.5c-55.41,0 -100.33,-44.92 -100.33,-100.33c0,-55.41 44.92,-100.33 100.33,-100.33C256.08,99.83 301,144.75 301,200.17C301,255.58 256.08,300.5 200.67,300.5z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50.67,200.33L100.33,200.33"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M300.75,200.33L350.43,200.33"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M78.42,131.58L112.08,151.91"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M288.75,151.91L323.58,131.58"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M149.42,113.75L129.42,79.25"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M252.08,113.75L272.75,79.25"
+        android:strokeWidth="4"
+        android:strokeColor="#ffffff" />
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M185.92,60.08l29.33,0l-14.67,38.83z" />
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M119.08,117.42l-7,6.83l14.5,7.33z" />
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M274.08,131.58l7.17,-14.17l7.5,7.08z" />
+</vector>

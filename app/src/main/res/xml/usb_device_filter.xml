@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-    <usb-device vendor-id="3034" product-id="34834" /> <!-- RTL8812AU -->
-    <usb-device vendor-id="3034" product-id="34842" /> <!-- RTL8812AU-VS -->
-    <usb-device vendor-id="2821" product-id="6098" /> <!-- Asus AC56 -->
+    <usb-device
+        product-id="34834"
+        vendor-id="3034" /> <!-- RTL8812AU -->
+    <usb-device
+        product-id="34842"
+        vendor-id="3034" /> <!-- RTL8812AU-VS -->
+    <usb-device
+        product-id="6098"
+        vendor-id="2821" /> <!-- Asus AC56 -->
+    <usb-device
+        product-id="43026"
+        vendor-id="3034" />
+    <usb-device
+        product-id="34843"
+        vendor-id="3034" />
+    <usb-device
+        product-id="34844"
+        vendor-id="3034" />
+    <usb-device
+        product-id="257"
+        vendor-id="9047" />
+    <usb-device
+        product-id="269"
+        vendor-id="9047" />
+    <usb-device
+        product-id="260"
+        vendor-id="9047" />
+    <usb-device
+        product-id="259"
+        vendor-id="9047" />
+    <usb-device
+        product-id="270"
+        vendor-id="9047" />
+    <usb-device
+        product-id="271"
+        vendor-id="9047" />
+    <usb-device
+        product-id="63"
+        vendor-id="5041" />
+    <usb-device
+        product-id="18"
+        vendor-id="9732" />
+    <usb-device
+        product-id="13078"
+        vendor-id="8193" />
+    <usb-device
+        product-id="13077"
+        vendor-id="8193" />
+    <usb-device
+        product-id="4361"
+        vendor-id="1293" />
+    <usb-device
+        product-id="36945"
+        vendor-id="2118" />
+    <usb-device
+        product-id="256"
+        vendor-id="5952" />
+    <usb-device
+        product-id="32859"
+        vendor-id="8436" />
+    <usb-device
+        product-id="47138"
+        vendor-id="29586" />
 </resources>

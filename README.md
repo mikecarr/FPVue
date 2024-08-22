@@ -1,12 +1,4 @@
 # FPVue_android
-
-> [!IMPORTANT]
-> August 2024: Unfortunately, this repository is now in an unmaintained state.
-> I don't have the time to maitain it like I would like to and there was not enough interest from external developers to contribute to it.
-> Feel free to fork it and take over but for now it will stay as is.
-
-FPVue Android is an app packaging multiple pieces together to decode an H264/H265 video feed broadcast by wfb-ng over the air.
-
 - [devourer](https://github.com/openipc/devourer): userspace rtl8812au driver initially created by [buldo](https://github.com/buldo) and converted to C by [josephnef](https://github.com/josephnef) .
 - [LiveVideo10ms](https://github.com/Consti10/LiveVideo10ms): excellent video decoder from [Consti10](https://github.com/Consti10) converted into a module.
 - [wfb-ng](https://github.com/svpcom/wfb-ng): library allowing the broadcast of the video feed over the air.
@@ -18,8 +10,6 @@ Supported rtl8812au wifi adapter are listed [here](https://github.com/gehee/FPVu
 Feel free to send pull requests to add new supported wifi adapters hardware IDs.
 
 Now support saving a dvr of the video feed to `Files/Internal Storage/Movies/`
-
-
 
 ## Compatibility
 
@@ -35,7 +25,6 @@ git submodule update
 ```
 
 The project can then be opened in android studio and built from there.
-
 
 ## Installation instructions
 

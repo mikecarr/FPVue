@@ -13,8 +13,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -36,34 +34,31 @@ android {
             }
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding = true
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
-
 dependencies {
+    implementation(project(":app:mavlink"))
+    implementation(project(":app:videonative"))
+    implementation(project(":app:wfbngrtl8812"))
 
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(project(":app:wfbngrtl8812"))
-    implementation(project(":app:mavlink"))
-    implementation("androidx.core:core-ktx:1.13.0")
-    implementation("com.github.Philjay:mpandroidchart:3.1.0")
+    implementation(libs.core.ktx)
+    implementation(libs.philjay.mpandroidchart)
+    implementation(libs.me.saket.cascade.cascade)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation(libs.me.saket.cascade.cascade)
-    implementation(libs.cascade.compose)
-
-    implementation(project(":app:videonative"))
 }

@@ -8,20 +8,8 @@ android {
 
     defaultConfig {
         minSdk = 26
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-//        externalNativeBuild {
-//            cmake {
-//                cppFlags("-std=c++20") // or whichever version you prefer
-//            }
-//        }
-//        // Set APP_STL to c++_static
-//        externalNativeBuild {
-//            cmake {
-//                arguments("-DANDROID_STL=c++_static")
-//            }
-//        }
     }
 
     buildTypes {
@@ -50,13 +38,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

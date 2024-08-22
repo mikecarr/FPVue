@@ -4,17 +4,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.WindowManager;
 import android.view.Display;
 import android.view.MotionEvent;
-import android.widget.LinearLayout;
+import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
-public class MovableLayout extends LinearLayout {
+public class MovableLayout extends RelativeLayout {
     private float dX, dY;
     private SharedPreferences preferences;
     private boolean isMovable = false;
-    private float defaultX,defaultY;
+    private float defaultX, defaultY;
 
     private String prefName;
 
@@ -41,13 +40,13 @@ public class MovableLayout extends LinearLayout {
         Point displaySize = new Point();
         display.getRealSize(displaySize);
 
-        defaultX = (float) displaySize.x / 2 - ((float)displaySize.y/8);
-        defaultY = (float) displaySize.y / 2 - ((float)displaySize.y/4);
+        defaultX = (float) displaySize.x / 2 - ((float) displaySize.y / 8);
+        defaultY = (float) displaySize.y / 2 - ((float) displaySize.y / 4);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if(!isMovable) return false;
+        if (!isMovable) return false;
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -56,8 +55,8 @@ public class MovableLayout extends LinearLayout {
                 break;
             case MotionEvent.ACTION_MOVE:
                 this.animate()
-                        .x(event.getRawX() + dX)
-                        .y(event.getRawY() + dY)
+                        .x(alignToGrid(event.getRawX() + this.dX, 25))
+                        .y(alignToGrid(event.getRawY() + this.dY, 25))
                         .setDuration(0)
                         .start();
                 break;
@@ -70,6 +69,10 @@ public class MovableLayout extends LinearLayout {
         return true;
     }
 
+    private float alignToGrid(float value, int gridSizePx) {
+        return (float) (Math.round(value / ((float) gridSizePx)) * gridSizePx);
+    }
+
     private void savePosition() {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putFloat(prefName + "_x", getX());
@@ -78,7 +81,7 @@ public class MovableLayout extends LinearLayout {
     }
 
     public void restorePosition(String prefName_) {
-        prefName=prefName_;
+        prefName = prefName_;
         float x = preferences.getFloat(prefName + "_x", defaultX);
         float y = preferences.getFloat(prefName + "_y", defaultY);
         setX(x);

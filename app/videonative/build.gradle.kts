@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.androidLibrary)
 }
 
-
-
 android {
     namespace = "com.geehe.videonative"
     compileSdk = 34
@@ -17,13 +15,6 @@ android {
         ndk {
             debugSymbolLevel = "FULL"
         }
-//        externalNativeBuild {
-//            cmake {
-//                cppFlags "-std=c++17"
-//                arguments "-DANDROID_STL=c++_shared"
-//            }
-//        }
-
     }
 
     buildTypes {
@@ -42,8 +33,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -51,9 +42,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
-
     androidTestImplementation(libs.espresso.core)
 }

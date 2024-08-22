@@ -3,18 +3,16 @@ package com.geehe.fpvue;
 import android.content.Context;
 import android.content.res.XmlResourceParser;
 
-import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DeviceFilterXmlParser {
 
-    public static List<UsbDeviceFilter> parseXml(Context context, int resourceId) throws XmlPullParserException, IOException {
+    public static List<UsbDeviceFilter> parseXml(Context context, int resourceId)
+            throws XmlPullParserException, IOException {
         List<UsbDeviceFilter> devices = new ArrayList<>();
         XmlResourceParser parser = context.getResources().getXml(resourceId);
 
