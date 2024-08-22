@@ -15,6 +15,15 @@ android {
         versionName = "1.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../fpv.jks")
+            storePassword = "release"
+            keyAlias = "fpv"
+            keyPassword = "release"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -26,6 +35,7 @@ android {
                 abiFilters.add("arm64-v8a")
                 abiFilters.add("armeabi-v7a")
             }
+            signingConfig = signingConfigs.getByName("release")
         }
         debug {
             ndk {

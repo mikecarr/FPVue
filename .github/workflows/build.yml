@@ -19,10 +19,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install openjdk-17-jdk
           export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-          ./gradlew build
+          keytool -genkeypair -dname CN=fpv -alias fpv -keyalg RSA -keystore fpv.jks -storepass release -noprompt
+          ./gradlew assembleRelease
+          mv app/build/outputs/apk/release/app-release.apk FPVue_openipc.apk
 
       - name: Upload
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          files: app/build/outputs/apk/release/app-release-unsigned.apk
+          files: FPVue_openipc.apk
